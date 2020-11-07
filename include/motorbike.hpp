@@ -1,3 +1,6 @@
+#ifndef MOTORBIKE_HPP
+#define MOTORBIKE_HPP
+
 #include "vehicle.hpp"
 
 class Motorbike : public Vehicle {
@@ -14,3 +17,5 @@ class Motorbike : public Vehicle {
         void seats(int seats) override;
         int drive(int distance) override;
 };
+
+#endif

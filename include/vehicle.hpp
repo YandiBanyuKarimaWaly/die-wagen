@@ -1,3 +1,6 @@
+#ifndef VEHICLE_HPP
+#define VEHICLE_HPP
+
 #include <string>
 
 class Vehicle {
@@ -28,3 +31,5 @@ class Vehicle {
         virtual int drive(int dist);
         int current_position();
 };
+
+#endif

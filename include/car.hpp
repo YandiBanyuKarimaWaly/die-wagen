@@ -1,3 +1,6 @@
+#ifndef CAR_HPP
+#define CAR_HPP
+
 #include "vehicle.hpp"
 
 enum Colour {
@@ -24,3 +27,5 @@ class Car : public Vehicle {
         void colour(Colour new_colour);
         Colour colour();
 };
+
+#endif
