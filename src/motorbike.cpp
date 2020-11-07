@@ -3,17 +3,17 @@
 
 Motorbike::Motorbike(std::string name, int seats) : Vehicle(name)
 {
-    this->wheels(2);
-    this->seats(seats);
+    this->set_wheels(2);
+    this->set_seats(seats);
 }
 
 Motorbike::Motorbike(char* name, int seats) : Vehicle(name)
 {
-    this->wheels(2);
-    this->seats(seats);
+    this->set_wheels(2);
+    this->set_seats(seats);
 }
 
-void Motorbike::seats(int seats)
+void Motorbike::set_seats(int seats)
 {
     if (seats < 1 || seats > 2) {
         std::cerr << "Motorbike seats can only be 1 or 2. Got " << seats << std::endl;
@@ -34,7 +34,7 @@ int Motorbike::drive(int distance)
     return distance;
 }
 
-void Motorbike::wheels(int wheels)
+void Motorbike::set_wheels(int wheels)
 {
     if (wheels != 2) {
         std::cerr << "Motorbike can only has 2 wheels. Got " << wheels << std::endl;

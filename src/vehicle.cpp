@@ -5,8 +5,8 @@ void Vehicle::init(std::string name, int wheels, int seats)
 {
     this->current_position_ = 0;
     this->name_ = name;
-    this->wheels(wheels);
-    this->seats(seats);
+    this->set_wheels(wheels);
+    this->set_seats(seats);
 }
 
 Vehicle::Vehicle(std::string name)
@@ -31,7 +31,7 @@ Vehicle::Vehicle(char* name, int wheels, int seats)
     this->init(name_std, wheels, seats);
 }
 
-void Vehicle::seats(int seats)
+void Vehicle::set_seats(int seats)
 {
     if (seats < 1) {
         std::cerr << "Number of seats must be at least 1. Got " << seats << std::endl;
@@ -41,12 +41,12 @@ void Vehicle::seats(int seats)
     this->n_seats_ = seats;
 }
 
-int Vehicle::seats()
+int Vehicle::get_seats()
 {
     return this->n_seats_;
 }
 
-void Vehicle::wheels(int wheels)
+void Vehicle::set_wheels(int wheels)
 {
     if (wheels < 1) {
         std::cerr << "Number of wheels must be at least 1. Got " << wheels << std::endl;
@@ -56,23 +56,23 @@ void Vehicle::wheels(int wheels)
     this->n_wheels_ = wheels;
 }
 
-int Vehicle::wheels()
+int Vehicle::get_wheels()
 {
     return this->n_wheels_;
 }
 
-void Vehicle::name(std::string new_name)
+void Vehicle::set_name(std::string new_name)
 {
     this->name_ = new_name;
 }
 
-void Vehicle::name(char* new_name)
+void Vehicle::set_name(char* new_name)
 {
     std::string new_name_std(new_name);
-    this->name(new_name_std);
+    this->set_name(new_name_std);
 }
 
-std::string Vehicle::name()
+std::string Vehicle::get_name()
 {
     return this->name_;
 }
@@ -83,7 +83,7 @@ int Vehicle::drive(int distance)
     return distance;
 }
 
-int Vehicle::current_position()
+int Vehicle::get_current_position()
 {
     return this->current_position_;
 }

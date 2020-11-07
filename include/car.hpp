@@ -21,11 +21,11 @@ class Car : public Vehicle {
         Car(std::string name, int wheels, int seats, Colour colour);
         Car(char* name, int wheels, int seats, Colour colour);
 
-        void seats(int seats) override;
-        void wheels(int wheels) override;
+        void set_seats(int seats) override;
+        void set_wheels(int wheels) override;
 
-        void colour(Colour new_colour);
-        Colour colour();
+        void set_colour(Colour new_colour);
+        Colour get_colour();
 };
 
 #endif

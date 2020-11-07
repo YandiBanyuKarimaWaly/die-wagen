@@ -5,7 +5,7 @@
 
 class Motorbike : public Vehicle {
     private:
-        void wheels(int wheels) override;
+        void set_wheels(int wheels) override;
 
     public:
         Motorbike(std::string name) : Vehicle(name, 2, 1) {}
@@ -14,7 +14,7 @@ class Motorbike : public Vehicle {
         Motorbike(std::string name, int seats);
         Motorbike(char* name, int seats);
 
-        void seats(int seats) override;
+        void set_seats(int seats) override;
         int drive(int distance) override;
 };
 

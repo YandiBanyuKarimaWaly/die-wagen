@@ -18,18 +18,18 @@ class Vehicle {
         Vehicle(std::string name, int wheels, int seats);
         Vehicle(char* name, int wheels, int seats);
 
-        void name(std::string new_name);
-        void name(char* new_name);
-        std::string name();
+        void set_name(std::string new_name);
+        void set_name(char* new_name);
+        std::string get_name();
 
-        virtual void wheels(int n_wheels);
-        int wheels();
+        virtual void set_wheels(int n_wheels);
+        int get_wheels();
 
-        virtual void seats(int n_seats);
-        int seats();
+        virtual void set_seats(int n_seats);
+        int get_seats();
 
         virtual int drive(int dist);
-        int current_position();
+        int get_current_position();
 };
 
 #endif
