@@ -1,0 +1,22 @@
+Implement classes for vehicles using inheritance:
+
+• A Vehicle has a name, a number of wheels, and a number of seats.
+
+• A Car is a vehicle with at least 4 seats and 4 wheels; Additionally cars have a color.
+
+• A Motorbike is a vehicle with 2 wheels and 1 or 2 seats.
+
+Make sure that all data members are only accessible via get/set methods,
+which write errors to the console when invalid parameters have been passed.
+
+Vehicles shall also have a current position, which is initialized to 0;
+when they drive this position is changed.
+
+Implement a member function int drive(int dist) which advances the current position by dist
+and returns it. Cars can drive forward and backward, motorbikes only forward.
+
+Override the drive method for motorbikes, such that an error message is printed 
+when a negative argument is passed for parameter dist.
+
+Create UML and codes, make a thorough analysis of the code, mention the advantages 
+and disadvantages/failure cases if any, provide output code in the console.
